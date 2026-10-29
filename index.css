@@ -1,7 +1,6 @@
 html {
     margin: 0;
     padding: 0;
-    min-height: 100%;
     overflow: hidden;
 }
 
@@ -10,15 +9,13 @@ body {
     padding: 0 10px 10px;
     inset: 10px;
     border: 2px solid black;
-    overflow-y: auto;
+    overflow: auto;
     position: fixed;
     margin: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    overflow-wrap: anywhere;
-    min-height: calc(100vh - 20px);
-    min-height: calc(100dvh - 20px);
+    padding: 0 10px 10px;
 }
 
 .nav {
@@ -61,7 +58,6 @@ h2 {
     grid-template-columns: 250px minmax(0, 1fr);
     margin: clamp(16px, 6vw, 100px);
     font-family: 'Courier New', monospace;
-    font-style: ;
 }
 
 .left {
@@ -84,7 +80,7 @@ h2 {
 }
 
 .middle p {
-    margin-top: 0 auto 1em;
+    margin: 0 auto 1em;
     max-width: 90ch;
     line-height: 1.6;
     font-size: 18px;
@@ -99,7 +95,7 @@ h2 {
   font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color:rgb(179, 104, 7);
+  color:#a4022bce;
   cursor: pointer;
   border: 3px solid;
   padding: 8px 4px;
@@ -113,10 +109,11 @@ h2 {
   position: relative;
   transform: translate(-2px);
 
-  &:last-child {
+}
+
+.button:last-child {
     margin-bottom: 0;
   }
-}
 
 .button:active {
   box-shadow: 0px 0px 0px 0px;
@@ -125,49 +122,34 @@ h2 {
 }
 
 @media (max-width: 700px) {
-    .nav {
-        gap: 10px;
-        padding: 12px 0;
-    }
-
-    .button {
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        padding: 8px 5px;
-    }
-
     .columns {
-        grid-template-columns: minmax(0, 1fr);
-        margin: 20px 0;
+        grid-template-columns: 250px minmax(500px, 1fr);
+        width: max-content;
+        margin: 100px;
     }
 
     .left {
-        position: static;
-        margin-top: 0;
-        padding: 0 12px 20px;
-        overflow-wrap: anywhere;
+        position: sticky;
+        top: 90px;
+        padding-right: 35px;
     }
 
     .middle {
-        border-left: none;
-        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-top: none;
     }
 
     .middle p {
-        font-size: 16px;
-        padding: 16px 12px;
+        font-size: 18px;
+        padding: 20px;
     }
 
-    h1 {
-        font-size: clamp(24px, 7vw, 32px);
-    }
-
-    h2 {
-        font-size: clamp(16px, 4.5vw, 24px);
+    .button {
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 8px 4px;
     }
 }
-
-
 
 
 
