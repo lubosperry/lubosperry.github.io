@@ -1,0 +1,13 @@
+.half-box {
+    width: 200px;
+    height: 200px;
+
+    clip-path: polygon (
+        0% 0%,     /* Top-left */
+        40% 0%,    /* Inner corner top */
+        40% 60%,   /* Inner corner elbow */
+        100% 60%,  /* Inner corner right */
+        100% 100%, /* Bottom-right */
+        0% 100%    /* Bottom-left */
+    );
+}
