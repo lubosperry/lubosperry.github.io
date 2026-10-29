@@ -5,17 +5,18 @@ html {
 }
 
 body {
-    background-color: palegoldenrod;
-    padding: 0 10px 10px;
+    background-color: rgba(77, 158, 112, 0.505);
+    padding: 0 0px 10px;
     inset: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     overflow: auto;
     position: fixed;
     margin: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 0 10px 10px;
+    padding: 0 0 10px 0;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .nav {
@@ -23,11 +24,18 @@ body {
     top: 0; 
     z-index: 1;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 15px 0;
-    background-color: palegoldenrod;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0px;
+    padding: 0;
+    background-color: white;
+    border-bottom: 303px;
+    margin-bottom: 400px;
+    width: 100%;
+    box-sizing: border-box;
+  
+
 }
 
 hr {
@@ -40,13 +48,14 @@ hr {
 
 
 h1 {
-    font-family: 'Courier New', monospace;
+    font-family: "Space Grotesk", sans-serif;
     text-align: center;
+    font-size: 45px;
     
 }
 
 h2 {
-    font-family: 'Courier New', monospace;
+    font-family: "Space Grotesk", sans-serif;
     text-align: center;
     
 }
@@ -57,7 +66,7 @@ h2 {
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
     margin: clamp(16px, 6vw, 100px);
-    font-family: 'Courier New', monospace;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .left {
@@ -85,29 +94,38 @@ h2 {
     line-height: 1.6;
     font-size: 18px;
     padding: 20px;
-    font-family: 'Courier New', monospace;
+    font-family: "Space Grotesk", sans-serif;
     overflow-wrap: anywhere;
 }
 
 
 .button {
-  font-family: 'Courier New', monospace;
-  font-size: 15px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color:#a4022bce;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 8px 4px;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 2px 2px 0px 0px, 2px 2px 0px 0px;
-  user-select: none;
-  display: block;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0;
-  text-align: center;
-  position: relative;
-  transform: translate(-2px);
+    flex: 1;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #000000;
+    background: #ffffff;
+
+    border: none;
+    border-right: 1px solid white;
+    border-radius: 0;
+    box-shadow: none;
+
+    padding: 18px 10px;
+    margin: 0;
+    width: auto;
+    max-width: none;
+
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transform: none;
+
+    transition: background-color 0.2s ease;
 
 }
 
