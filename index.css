@@ -113,48 +113,7 @@ h2 {
   left: 5px;
 }
 
-@media (max-width: 700px) {
-    body {
-        inset: 6px;               /* thinner gap around the frame */
-        padding: 0 8px 8px;
-    }
 
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1rem; }
-
-    .nav {
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    .button {
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        padding: 6px 4px;
-    }
-
-    .columns {
-        grid-template-columns: 1fr;       /* stack: sidebar on top, text below */
-    }
-
-    .left {
-        position: static;                 /* turn off sticky, if you added it */
-    }
-
-    .profile {
-        max-width: 220px;                 /* stops the card stretching full width */
-        margin: 0 auto;
-    }
-
-    .middle {
-        border-left: none;
-        border-top: 1px solid black;      /* the divider becomes horizontal */
-    }
-
-    .middle p {
-        font-size: 16px;
-    }
-}
 
 
 
