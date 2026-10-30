@@ -19,23 +19,87 @@ body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-.nav {
+.nav-container {
     position: sticky;
-    top: 0; 
-    z-index: 1;
+    top: 0;
+    z-index: 10;
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    gap: 0px;
-    padding: 0;
-    background-color: white;
-    border-bottom: 303px;
-    margin-bottom: 400px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent;
     width: 100%;
+    border-bottom: 1px solid black;
     box-sizing: border-box;
-  
+    padding: 10px 0;
+}
 
+
+.menu-checkbox {
+    display: none;
+}
+
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropdown-menu {
+    display: none;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.menu-checkbox:checked ~ .dropdown-menu {
+    display: flex;
+}
+
+.menu-checkbox:checked ~ .hamburger-btn span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-checkbox:checked ~ .hamburger-btn span:nth-child(2) {
+    opacity: 0;
+}
+.menu-checkbox:checked ~ .hamburger-btn span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-top: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f9f9f9;
 }
 
 hr {
@@ -60,12 +124,19 @@ h2 {
     
 }
 
+h1, h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
+    text-align: center;
+
+}
+
 
 .columns {
     flex: 1;
     display: grid;
     grid-template-columns: 250px minmax(0, 1fr);
-    margin: clamp(16px, 6vw, 100px);
+    margin: 20px;
     font-family: "Space Grotesk", sans-serif;
 }
 
