@@ -14,17 +14,52 @@
  </head>
  
  <body>
+    <header id="home" class="fullscreen">
     <h1>Lubos Perry</h1> 
     <nav>
-        <button class="hamburger" aria-label="Menu">
-            <i class="material-icons">menu</i>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <i class="material-icons">arrow_drop_down</i>
         </button>
-        <ul class="nav-links">
-            <li><a href="index1.html">Home</a></li>
-            <li><a href="index2.html">About me</a></li>
-            <li><a href="index3.html">Portfolio</a></li>
-            <li><a href="index4.html">Contact</a></li>
-        </ul>
     </nav>
+    </header>
+            <ul class="nav-links">
+            <li><a href="#about">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#random">Random</a></li>
+        </ul>
+
+    <section id="about" class="fullscreen">
+        <h3>About me</h3>
+        <button class="hamburger back-up" aria-label="Back to menu">
+            <i class="material-icons">arrow_drop_up</i>
+        </button>
+        <p>Hello.</p>
+
+    </section>
+        <section id="portfolio" class="fullscreen">
+        <h3>Portfolio</h3>
+            <button class="hamburger back-up" aria-label="Back to menu">
+            <i class="material-icons">arrow_drop_up</i>
+        </button>
+        <p>My work.</p>
+
+    </section>
+        <section id="contact" class="fullscreen">
+        <h3>Contact</h3>
+            <button class="hamburger back-up" aria-label="Back to menu">
+            <i class="material-icons">arrow_drop_up</i>
+        </button>
+        <p>lubos.perry@gmail.com</p>
+
+    </section>
+        <section id="random" class="fullscreen">
+        <h3>Random section</h3>
+            <button class="hamburger back-up" aria-label="Back to menu">
+            <i class="material-icons">arrow_drop_up</i>
+        </button>
+        <p>Sup</p>
+
+    </section>
  </body>
 </html>

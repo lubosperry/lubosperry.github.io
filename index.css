@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .hamburger {
   display: flex;
   cursor: pointer;
@@ -7,6 +11,17 @@
   align-items: center;
   justify-content: center;
 }
+.hamburger .material-icons {
+
+    font-size: 55px;
+    transition: transform 1s ease;
+    width: 0;
+    height: 5;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+
+}
+
 body {
     font-family: "Space Grotesk", sans-serif;
     background-color: var(--base-color);
@@ -15,7 +30,7 @@ body {
 
 h1 {
     padding: 100px;
-    weight: 300;
+    font-weight: 300;
     font-size: 45px;;
 }
 
@@ -27,12 +42,22 @@ h1 {
   gap: 45px;
   justify-content: center;
   align-items: center;
+  border-style: solid;
+  border-right: 50vw solid;
+  border-left: 50vw solid;
+  border-color: white;
+  min-height: 100vh;
+  margin: 0;
+
 }
 
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    flex: 1;
+    justify-content: center;
 
 }
 
@@ -42,7 +67,7 @@ nav {
 
 :root {
     --base-color: white;
-    --base-vatriant: white;
+    --base-variant: white;
     --text-color: black;
     --secondary-text: rgb(209, 12, 12);
     --primary-color: grey;
@@ -56,4 +81,32 @@ nav {
     --secondary-text: rgb(207, 205, 205);
     --primary-color: grey;
     --accent-color: rgb(151, 151, 180);
+}
+
+
+.fullscreen {
+    min-height: 100vh;
+}
+
+section {
+    padding: 100px;
+    position: relative;
+}
+
+header.fullscreen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-up {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.back-up .material-icons {
+    font-size: 25px;
+    border-left-width: 14px;
+    border-right-width: 14px;
 }
